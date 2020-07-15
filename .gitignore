@@ -3,3 +3,4 @@ Scripts/
 .idea/
 .env
 src/__pycache__/
+pyvenv.cfg
