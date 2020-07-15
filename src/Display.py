@@ -5,6 +5,7 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.core.window import Window
+from kivy.uix.image import Image
 
 Window.clearcolor = (1, 1, 1, 1)
 
@@ -20,7 +21,8 @@ class MyApp(App):
     date = formatted_date
     pressure = f"{current_forecast['pressure']} hPa"
     windSpeed = f"{current_forecast['wind']} km/h"
-    overall = f"{current_forecast['overall'][0]['description']}"
+    overall = f"{current_forecast['overall']}, \n{int(current_forecast['temp'])}" + u" \u00B0C"
+    weather_icon = f"{current_forecast['weatherIconUrl']}"
 
     def build(self):
         return AppLayout()
