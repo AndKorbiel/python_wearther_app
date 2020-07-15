@@ -1,0 +1,37 @@
+#:set default_font_size "34sp"
+#:set default_font_color 255,255,255,1
+
+<AppLayout>
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        Label:
+            text: f"{app.todays_name}"
+            color: default_font_color
+
+        Label:
+            text: f"{app.date}"
+            color: default_font_color
+
+        Label:
+            text: f"Current weather in: {app.city_name}"
+            color: default_font_color
+            font_size: default_font_size
+            color: default_font_color
+
+        Label:
+            text: f"{app.temperature}"
+            color: default_font_color
+
+        Label:
+            text: f"Pressure: {app.pressure}"
+            color: default_font_color
+
+        Label:
+            text: f"Wind speed: {app.windSpeed}"
+            color: default_font_color
+
+        Label:
+            text: f"{app.overall}"
+            color: default_font_color

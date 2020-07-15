@@ -1,5 +1,6 @@
 Lib/
 Scripts/
+share/
 .idea/
 .env
 src/__pycache__/
