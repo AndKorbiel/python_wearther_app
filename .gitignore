@@ -2,6 +2,8 @@ Lib/
 Scripts/
 share/
 .idea/
+build/
+dist/
 .env
 src/__pycache__/
 pyvenv.cfg
