@@ -1,13 +1,10 @@
 import kivy
 from kivy.app import App
-from kivy.uix.label import Label
-from kivy.uix.gridlayout import GridLayout
 from kivy.uix.widget import Widget
-from kivy.properties import ObjectProperty
 from kivy.core.window import Window
-from kivy.uix.image import Image
+Window.size = (350, 300)
 
-Window.clearcolor = (1, 1, 1, 1)
+Window.clearcolor = (255/255, 240/255, 200/255, 1)
 
 from Main import current_forecast, formatted_date, today_name
 
@@ -21,7 +18,7 @@ class MyApp(App):
     date = formatted_date
     pressure = f"{current_forecast['pressure']} hPa"
     windSpeed = f"{current_forecast['wind']} km/h"
-    overall = f"{current_forecast['overall']}, \n{int(current_forecast['temp'])}" + u" \u00B0C"
+    overall = f"{current_forecast['overall']},\n{int(current_forecast['temp'])}" + u" \u00B0C"
     weather_icon = f"{current_forecast['weatherIconUrl']}"
 
     def build(self):
