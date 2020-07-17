@@ -15,7 +15,7 @@ current_forecast = {
     'pressure': '',
     'wind': '',
     'overall': '',
-    'weatherIconUrl': '../Public/img/001-sun.png'
+    'weatherIconUrl': 'img/001-sun.png'
 }
 
 # Get Forecast
@@ -40,16 +40,16 @@ today_name = today.strftime("%A")
 
 def getWeatherIcon(value):
     return {
-        'few clouds': '../Public/img/001-sun.png',
-        'broken clouds':'../Public/img/001-sun.png',
-        'light rain': '../Public/img/004-drop.png',
-        'rain': '../Public/img/004-drop.png',
-        'shower rain': '../Public/img/004-drop.png',
-        'moderate rain': '../Public/img/004-drop.png',
-        'clear sky': '../Public/img/002-sunny.png',
-        'scattered clouds': '../Public/img/003-clouds.png',
-        'thunderstorm': '../Public/img/006-thunder.png',
-        'snow': '../Public/img/005-snowflake.png',
+        'few clouds': 'img/001-sun.png',
+        'broken clouds': 'img/001-sun.png',
+        'light rain': 'img/004-drop.png',
+        'rain': 'img/004-drop.png',
+        'shower rain': 'img/004-drop.png',
+        'moderate rain': 'img/004-drop.png',
+        'clear sky': 'img/002-sunny.png',
+        'scattered clouds': 'img/003-clouds.png',
+        'thunderstorm': 'img/006-thunder.png',
+        'snow': 'img/005-snowflake.png',
     }.get(value, 'clear sky')
 
 current_forecast['weatherIconUrl'] = getWeatherIcon(current_forecast['overall'])

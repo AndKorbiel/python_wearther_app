@@ -12,6 +12,7 @@ class AppLayout(Widget):
     pass
 
 class MyApp(App):
+    title = 'Simple Forecast App'
     city_name = f"{current_forecast['cityName']}"
     temperature = f"Temperature: {current_forecast['temp']}" + u" \u00B0C"
     todays_name = today_name
